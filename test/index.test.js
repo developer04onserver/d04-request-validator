@@ -1,0 +1,3 @@
+import test from "node:test"; import assert from "node:assert/strict"; import { validate } from "../src/index.js";
+test("validates required, type, and range rules",()=>{const schema={name:{type:"string",required:true,minLength:2},age:{type:"number",min:18}};assert.equal(validate({name:"Dev",age:21},schema).valid,true);assert.equal(validate({name:"",age:12},schema).valid,false);});
+test("rejects unknown fields by default",()=>{assert.equal(validate({extra:true},{name:{type:"string"}}).valid,false);});

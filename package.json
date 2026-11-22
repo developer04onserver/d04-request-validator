@@ -1,0 +1,13 @@
+{
+  "name": "d04-request-validator",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A small schema-based request validator with field rules and middleware integration.",
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
